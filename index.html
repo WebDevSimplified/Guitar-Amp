@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="script.js" defer></script>
+  <style>
+    body {
+      background-color: #DBDBDB;
+    }
+
+    canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: auto min-content;
+      justify-content: center;
+      justify-items: end;
+      align-items: center;
+      gap: 5px 10px;
+    }
+
+    input {
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="visualizer"></canvas>
+  <div class="grid">
+    <label for="volume">Volume</label>
+    <input type="range" min="0" max="1" value=".5" step=".01" id="volume">
+    <label for="bass">Bass</label>
+    <input type="range" min="-10" max="10" value="0" id="bass">
+    <label for="mid">Mid</label>
+    <input type="range" min="-10" max="10" value="0" id="mid">
+    <label for="treble">Treble</label>
+    <input type="range" min="-10" max="10" value="0" id="treble">
+  </div>
+</body>
+</html>
